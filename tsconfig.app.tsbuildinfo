@@ -1,0 +1,1 @@
+{"root":["./vite.config.ts","./src/App.tsx","./src/main.tsx","./src/cases/spots/components/spot-dialog.tsx","./src/cases/spots/dtos/spot.dto.ts","./src/cases/spots/hooks/use-hooks.ts","./src/cases/spots/services/spot.service.ts","./src/components/ui/button.tsx","./src/lib/axios.ts","./src/lib/utils.ts"],"errors":true,"version":"6.0.3"}
