@@ -1,18 +1,15 @@
+import logomarca from '@/assets/logomarca.svg';
+import { SpotButton } from '@/cases/spots/components/spot-button';
+
 export function Header() {
   return (
-    <header>
-      <div className="container">
-        <div className="brand">
-          <img src="./assets/img/logo_lanchonete.svg" alt="Logo" />
-          <div>
-            <h1>Cardápio Digital</h1>
-            <p>Faça o seu pedido pelo nosso cardápio digital</p>
-          </div>
-        </div>
-        <div className="cart-button">
-          <img src="./assets/img/cart.svg" alt="Carrinho" />
+    <header className="bg-transparent text-brand-foreground">
+      <div className="mx-auto flex w-full items-center justify-between px-6 py-4">
+        <img src={logomarca} className="h-auto w-48" />
+        <div>
+          <SpotButton />
         </div>
       </div>
     </header>
-  );
+  )
 }
