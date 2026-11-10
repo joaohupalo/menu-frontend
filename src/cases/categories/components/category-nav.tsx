@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useCategories } from "../hooks/use-categories"
 import { cn } from "cn"
-import { Utensils } from "lucide-react"
+import { CategoryIcon } from "./category-icon"
 
 export function CategoryNav() {
 
@@ -23,10 +23,7 @@ export function CategoryNav() {
                         'transition-colors duration-200',
                         'hover:z-10 hover:text-[#B86A2C]'
             )}>
-                {category.icon ? (
-                    <span>ICON</span>
-                ) : (<Utensils className="size-10 text-brand " />
-                )}
+                {<CategoryIcon name={category.icon} className="size-10 text-brand" />}
                     <span className="leading-tight">{category.name}</span>
                     </Link>
                 </li>
