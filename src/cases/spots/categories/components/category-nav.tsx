@@ -10,12 +10,12 @@ export function CategoryNav() {
     return (
         <nav className="w-full">
             <ul className="overflow-hidden rounded-2xl border border-border/70 bg-transparent">
-            { categories.map(category) => (
+            { categories.map((category) => (
                 <li key={category.id}
                 className="relative"
                 >
                     <Link
-                    to={`/products?categoryId=$(category.id)`}
+                    to={`/products?categoryId=${category.id}`}
                     className={cn(
                         'relative flex w-full items-center gap-3 px-5 py-5',
                         'font-menu text-lg font-semibold uppercase tracking-tight',
@@ -30,7 +30,7 @@ export function CategoryNav() {
                     <span className="leading-tight">{category.name}</span>
                     </Link>
                 </li>
-            )}
+            ))}
             </ul>
         </nav>
     )

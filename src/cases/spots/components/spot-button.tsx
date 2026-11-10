@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { SpotDialog } from "./spot-dialog";
 import { useState } from "react";
-import { SpotDTO } from "../dtos/spot.dto";
+import type { SpotDTO } from "../dtos/spot.dto";
 
 export function SpotButton() {
     const [dialogOpen, setDialogOpen] = useState(false);
@@ -29,6 +29,7 @@ export function SpotButton() {
 
             <SpotDialog 
             open={dialogOpen}
+            onOpenChange={setDialogOpen}
             onSelect={handleSelect}
             selectedSpotId={selectedSpot?.id}
             />

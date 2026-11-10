@@ -8,16 +8,17 @@ import {
 } from "@/components/ui/dialog"
 import { MapPin } from "lucide-react";
 import { useSpots } from "../hooks/use-hook";
-import { SpotDTO } from "../dtos/spot.dto";
+import type { SpotDTO } from "../dtos/spot.dto";
 import { cn } from "cn";
 
 interface SpotDialogProps {
   open: boolean;
+  onOpenChange: (open: boolean) => void;
   onSelect: (open: SpotDTO) => void;
   selectedSpotId?: string;
 }
 
-export function SpotDialog({ open, onSelect, selectedSpotId }: SpotDialogProps) {
+export function SpotDialog({ open, onOpenChange, onSelect, selectedSpotId }: SpotDialogProps) {
 
   const { data: spots = [] } = useSpots();
 

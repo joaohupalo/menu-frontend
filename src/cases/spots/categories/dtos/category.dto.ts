@@ -1,5 +1,5 @@
 export interface CategoryDTO {
-    id: string.
+    id: string;
     name: string;
     active: boolean;
     icon?: string;
