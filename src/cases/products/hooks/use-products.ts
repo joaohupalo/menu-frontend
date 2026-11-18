@@ -8,9 +8,9 @@ export function useProducts(categoryId?: string) {
     })
 }
 
-export function useProduct(id: string) {
-    return useQuery({
-        queryKey: ['products', 'detail', id],
-        queryFn: () => ProductService.findOne(id)
-    })
-}
+//export function useProduct(id: string) {
+//    return useQuery({
+//        queryKey: ['products', 'detail', id],
+//        queryFn: () => ProductService.findOne(id)
+//    })
+//}

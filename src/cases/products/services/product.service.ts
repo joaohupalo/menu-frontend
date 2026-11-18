@@ -6,7 +6,7 @@ const ENDPOINT = '/products';
 export const ProductService = {
     async listAll(categoryId?: string): Promise<ProductDTO[]> {
         const result = await api.get<ProductDTO[]>(ENDPOINT, {
-            params: categoryId ? { categoryId } : {}
+            params: { categoryId }
         });
         return result.data
     },
